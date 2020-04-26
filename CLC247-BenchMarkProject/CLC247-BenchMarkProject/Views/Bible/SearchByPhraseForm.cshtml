@@ -1,0 +1,20 @@
+﻿@model CLC247_BenchMarkProject.Models.BibleVerseModel
+
+@{
+    ViewBag.Title = "SearchByPhraseForm";
+}
+
+<h2>SearchByPhraseForm</h2>
+
+@using (Html.BeginForm("OnSearchByPhrase", "Bible", FormMethod.Post))
+{
+    @Html.AntiForgeryToken()
+
+<div class="form-horizontal">
+
+        <hr />
+        Phrase: <input type="text" name="phrase">
+        <input type="submit" value="Submit" />
+</div>
+
+}

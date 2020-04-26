@@ -1,0 +1,50 @@
+﻿@model List<CLC247_BenchMarkProject.Models.BibleVerseModel>
+
+@{
+    ViewBag.Title = "VersesResult";
+}
+
+<h2>VersesResult</h2>
+<h2>@ViewData["message"]</h2>
+<table class="table">
+    <<thead>
+    <tr>
+        <th>    Testament   </th>
+        <th>    Book    </th>
+        <th>    Chapter Number  </th>
+        <th>    Verse Number    </th>
+        <th>    Verse </th>
+
+    </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Testament)
+            </td>
+
+            <td>
+                @Html.DisplayFor(modelItem => item.Book)
+            </td>
+
+            <td>
+                @Html.DisplayFor(modelItem => item.ChapterNumber)
+            </td>
+
+            <td>
+                @Html.DisplayNameFor(modelItem => item.VerseNumber)
+            </td>
+
+            <td>
+                @Html.DisplayFor(modelItem => item.VerseText)
+            </td>
+            </tr>
+         
+         }
+        
+    }
+     </tbody>
+</table>
+

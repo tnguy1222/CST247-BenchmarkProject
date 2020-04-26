@@ -1,0 +1,30 @@
+﻿@model CLC247_BenchMarkProject.Models.BibleVerseModel
+@{
+    ViewBag.Title = "ResultSuccess";
+}
+
+<h2>ResultSuccess</h2>
+
+<table class="table">
+    <thead>
+    <tr>
+        <th>    Testament   </th>
+        <th>    Book    </th>
+        <th>    Chapter Number  </th>
+        <th>    Verse Number    </th>
+        <th>    Verse </th>
+
+    </tr>
+    </thead>
+    <tbody>
+    <tr>
+        <td>@Html.DisplayFor(model => model.Testament)</td>
+        <td>@Html.DisplayFor(model => model.Book)</td>
+        <td>@Html.DisplayFor(model => model.ChapterNumber)</td>
+        <td>@Html.DisplayFor(model => model.VerseNumber)</td>
+        <td>@Html.DisplayFor(model => model.VerseText)</td>
+        
+        
+    </tr>
+    </tbody>
+</table>
